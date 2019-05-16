@@ -1,0 +1,1 @@
+ReactDOM.render('<Reviews />', document.getElementById('reviews'));
