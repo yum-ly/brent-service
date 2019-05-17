@@ -9,13 +9,6 @@ let reviewSchema = mongoose.Schema({
 
 let Review = mongoose.model('Review', reviewSchema);
 
-let save = (err, reviews) => {
-    Review.insertMany(review, function(err) {
-      if (err) {
-      console.log(err)
-      }
-    });
-  }
 
   let findAll = (object, callback) => {
     Review.find(object, function(err, data) {
@@ -29,5 +22,4 @@ let save = (err, reviews) => {
 
 
 
-module.exports.save = save;
 module.exports.findAll = findAll;
