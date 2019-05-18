@@ -8,6 +8,7 @@ class Reviews extends React.Component {
 
         this.state = {
             uuid: null,
+            restaurants: [],
             reviews: []
         }
     }
@@ -15,9 +16,9 @@ class Reviews extends React.Component {
     componentDidMount() {
         axios.get('/reviews')
         .then((response) => {
-            console.log(response);
+            console.log(response.data);
             this.setState({
-                reviews: response.data.reviews
+                restaurants: response.data
             });
         })
         .catch((error) => {

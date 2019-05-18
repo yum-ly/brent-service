@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../client/dist'));
 
   
-// get all the reviews
+//get all the reviews
 app.get('/reviews', function (req, res) {
     db.findAll({}, (err, data) => {
         if (err) {
@@ -27,6 +27,8 @@ app.get('/reviews', function (req, res) {
         res.send(data);  
     })
 });
+
+
 
 
 let port = 3004;
