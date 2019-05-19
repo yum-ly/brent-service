@@ -29,7 +29,7 @@ class Reviews extends React.Component {
     render() {
         return(
             <div>
-                <p1>hello</p1>
+                hello
             </div>
         )
     }

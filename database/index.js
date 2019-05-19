@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fecreviews',{ useNewUrlParser: true });
+
 var fs = require('fs');
+const dbinfo = require('./db.js');
+
+const uri = `mongodb+srv://${dbinfo.username}:${dbinfo.pw}@cluster0-kn8tl.mongodb.net/test?retryWrites=true`;
+
+mongoose.connect(uri,{ useNewUrlParser: true });
+
 
 
 let reviewSchema = mongoose.Schema({
@@ -30,6 +36,16 @@ let findOne = (object, callback) => {
 }
 
 
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://blrusnell:<password>@cluster0-kn8tl.mongodb.net/test?retryWrites=true";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
+
 
 
 module.exports.findOne = findOne;
@@ -56,3 +72,8 @@ module.exports.findAll = findAll;
 // }
 
 // seed()
+
+
+
+
+//'mongodb://localhost/fecreviews'
