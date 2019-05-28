@@ -23,12 +23,9 @@ app.get('/reviews', function (req, res) {
             console.log(err);
             res.end();
         }
-        console.log(data);
         res.send(data);  
     })
 });
-
-
 
 
 let port = 3004;

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 var fs = require('fs');
-const dbinfo = require('./db.js');
+const dbinfo = require('./dbinfo.js');
 
 const uri = `mongodb+srv://${dbinfo.username}:${dbinfo.pw}@cluster0-kn8tl.mongodb.net/test?retryWrites=true`;
 
