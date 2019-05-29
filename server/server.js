@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const reviews = require('../database/index.js');
 const db = require('../database/index.js');
 const app = express();
 
