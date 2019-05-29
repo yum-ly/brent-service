@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.use(express.static(__dirname + '/../client/dist'));
+app.use(express.static('dist'));
+//__dirname + '/../client/dist'
 
   
 //get all the reviews
