@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-app.use(express.static('dist'));
+app.use(express.static(__dirname + '/../client/dist'));
 //__dirname + '/../client/dist'
 
   
