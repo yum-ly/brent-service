@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
+
 
 class Reviews extends React.Component {
     constructor(props) {
@@ -8,7 +8,7 @@ class Reviews extends React.Component {
 
         this.state = {
             uuid: null,
-            reviews: [{stars: 0, user: '', date: '', text: '', avatar: ''}],
+            reviews: [{stars: 0, user: '', date: '', text: '', avatar: ''}, {stars: 0, user: '', date: '', text: '', avatar: ''}],
         }
     }
 
@@ -25,20 +25,29 @@ class Reviews extends React.Component {
         })
     }
 
+
     render() {
         return(
-            <div className='container'>
-                <img className='images' alt='Avatar' src={this.state.reviews[0].avatar}/>
-                <div className='names'>{this.state.reviews[0].name}</div>
-                <div className='dates'>{this.state.reviews[0].date}</div>
-                <div className='startext'>
-                    <span className='rating'>{this.state.reviews[0].stars}</span>
-                    <span className='text'>{this.state.reviews[0].text}</span>
-                </div>
+            <div>
+                {this.state.reviews.map( (review, index) => {
+                    return(
+                        <div>
+                            <img key={index} src={review.avatar} alt="Avatar" className="images"/>
+                            <div key={index} className='names'>{review.user}</div>
+                            <div key={index} className='dates'>{review.date.slice(0, 10)}</div>
+                            <div className='startext'>
+                                <span key={index} className='rating'>{review.stars}</span>
+                                <span key={index} className='text'>{review.text}</span>
+                            </div>
+                        </div>
+                    )
+                }
+            )}
             </div>
         )
     }
 }
+                    
 
 export default Reviews;
 
