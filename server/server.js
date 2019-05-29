@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../database/index.js');
+//const db = require('../database/index.js');
 const app = express();
 
 
@@ -17,15 +17,15 @@ app.use(express.static('dist'));
 
   
 //get all the reviews
-app.get('/reviews', function (req, res) {
-    db.findAll({}, (err, data) => {
-        if (err) {
-            console.log(err);
-            res.end();
-        }
-        res.send(data);  
-    })
-});
+// app.get('/reviews', function (req, res) {
+//     db.findAll({}, (err, data) => {
+//         if (err) {
+//             console.log(err);
+//             res.end();
+//         }
+//         res.send(data);  
+//     })
+// });
 
 
 let port = 3004;
