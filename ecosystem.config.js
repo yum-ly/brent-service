@@ -10,7 +10,7 @@ module.exports = {
         key: '~/.ssh/fec-reviews.pem',
         ref: 'origin/development',
         repo: 'git@github.com:yum-ly/brent-service.git',
-        path: '/home/ubuntu/fec-reviews',
+        path: '/home/ubuntu/brent-service',
         'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
       }
     }
