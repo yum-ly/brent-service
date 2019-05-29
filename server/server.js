@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use(express.static(__dirname + '/../client/dist'));
-//__dirname + '/../client/dist'
 
   
 //get all the reviews
@@ -23,7 +22,7 @@ app.get('/reviews', function (req, res) {
             console.log(err);
             res.end();
         }
-        res.send(data);  
+        res.send(data[0]);  
     })
 });
 
