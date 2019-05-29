@@ -16,6 +16,7 @@ class Reviews extends React.Component {
     componentDidMount() {
         axios.get('/reviews')
         .then((response) => {
+            console.log(response);
             this.setState({
                 restaurants: response.data
             });
