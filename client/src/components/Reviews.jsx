@@ -27,13 +27,13 @@ class Reviews extends React.Component {
 
     render() {
         return(
-            <div>
-                <img className='images' src={this.state.reviews[0].avatar}/>
+            <div className='container'>
+                <img className='images' alt='Avatar' src={this.state.reviews[0].avatar}/>
                 <div className='names'>{this.state.reviews[0].name}</div>
                 <div className='dates'>{this.state.reviews[0].date}</div>
-                <div>
-                    <div className='stars'>{this.state.reviews[0].stars}></div>
-                    <div className='text'>{this.state.reviews[0].text}</div>
+                <div className='startext'>
+                    <span className='rating'>{this.state.reviews[0].stars}</span>
+                    <span className='text'>{this.state.reviews[0].text}</span>
                 </div>
             </div>
         )

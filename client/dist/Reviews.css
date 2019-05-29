@@ -3,6 +3,38 @@
     display: inline-block;
     height: 72px;
     width: 72px;
+    border-radius: 50%
 }
 
 
+.startext {
+    color: #101820;
+    font: 15px/20px 'Calibre-Regular';
+    letter-spacing: .013em;
+}
+
+.dates {
+    color: #656666;
+    font: 15px/24px 'Calibre-Regular';
+    letter-spacing: .013em;
+}
+
+.container {
+    background: white;
+    padding: 0 40px 40px;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+  .rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+  }
+  .rating > span:hover:before,
+  .rating > span:hover ~ span:before {
+     content: "\2605";
+     position: absolute;
+  }
