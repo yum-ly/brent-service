@@ -17,12 +17,14 @@ app.use(express.static(__dirname + '/../client/dist'));
   
 //get one review
 app.get('/reviews', function (req, res) {
-    db.findOne(req.body, (err, data) => {
+    let id = req.query.uuid;
+    db.findOne({uuid: id}, (err, data) => {
+        
         if (err) {
             console.log(err);
             res.end();
         }
-        console.log(data);
+        console.log(data)
         res.send(data);  
     })
 });

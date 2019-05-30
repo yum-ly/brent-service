@@ -16,7 +16,7 @@ let reviewSchema = mongoose.Schema({
 
 let Review = mongoose.model('Review', reviewSchema);
 
-
+//pull all reviews from db
 let findAll = (object, callback) => {
   Review.find(object, function(err, data) {
     if (err) {
@@ -26,6 +26,7 @@ let findAll = (object, callback) => {
   });
 }
 
+//Pull one review from db
 let findOne = (object, callback) => {
   Review.findOne(object, function(err, data) {
     if (err) {

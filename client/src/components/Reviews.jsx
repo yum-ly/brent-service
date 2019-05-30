@@ -13,7 +13,7 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('/reviews', {params: { uuid: 10 }})
+        axios.get('/reviews', {params: { uuid: 55 }})
         .then((response) => {
             console.log(response.data.review);
             this.setState({
