@@ -25,10 +25,21 @@ class Reviews extends React.Component {
         })
     }
 
+    avgStar() {
+        let array = this.state.reviews.map((review) => {
+            return Number(review.stars);
+        });
+        let num = array.reduce((acc, cur) => {
+            return acc + cur;
+        });
+        return num / 5;
+    }
+
 
     render() {
         return(
             <div>
+                <div>{this.avgStar()}</div>
                 {this.state.reviews.map( (review, index) => {
                     return(
                         <div>
