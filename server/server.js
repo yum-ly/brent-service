@@ -19,15 +19,14 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.get('/reviews', function (req, res) {
     let id = req.query.uuid;
     db.findOne({uuid: id}, (err, data) => {
-        
         if (err) {
             console.log(err);
             res.end();
         }
-        console.log(data)
         res.send(data);  
     })
 });
+        
 
 
 let port = 3004;

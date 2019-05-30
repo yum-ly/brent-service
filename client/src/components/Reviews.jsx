@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ReactStars from 'react-stars'
 
 
 class Reviews extends React.Component {
@@ -8,7 +9,7 @@ class Reviews extends React.Component {
 
         this.state = {
             uuid: null,
-            reviews: [{stars: 0, user: '', date: '', text: '', avatar: ''}, {stars: 0, user: '', date: '', text: '', avatar: ''}],
+            reviews: [{stars: 0, user: '', date: '', text: '', avatar: ''}],
         }
     }
 
@@ -26,6 +27,7 @@ class Reviews extends React.Component {
     }
 
     avgStar() {
+        let output = '';
         let array = this.state.reviews.map((review) => {
             return Number(review.stars);
         });
@@ -80,7 +82,9 @@ class Reviews extends React.Component {
     render() {
         return(
             <div>
-                <div>{this.avgStar()}</div>
+                <div>
+                <ReactStars count={5} size={24} color2={'#ffd700'} value={this.avgStar()} edit={false} />,
+                </div>
                 {this.state.reviews.map( (review, index) => {
                     return(
                         <div>
