@@ -83,7 +83,7 @@ class Reviews extends React.Component {
         return(
             <div>
                 <div>
-                <ReactStars count={5} size={24} color2={'#ffd700'} value={this.avgStar()} edit={false} />,
+                <ReactStars count={5} size={24} color2={'#ffd700'} value={this.avgStar()} edit={false} />
                 </div>
                 {this.state.reviews.map( (review, index) => {
                     return(
@@ -92,7 +92,7 @@ class Reviews extends React.Component {
                             <div key={index} className='names'>{review.user}</div>
                             <div key={index} className='dates'>{this.dateChanger(review.date)}</div>
                             <div className='startext'>
-                                <span key={index} className='rating'>{review.stars}</span>
+                            <ReactStars count={5} size={24} color2={'#ffd700'} value={review.stars} edit={false} />
                                 <span key={index} className='text'>{review.text}</span>
                             </div>
                         </div>
