@@ -15,14 +15,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../client/dist'));
 
   
-//get all the reviews
+//get one review
 app.get('/reviews', function (req, res) {
-    db.findAll({}, (err, data) => {
+    db.findOne(req.body, (err, data) => {
         if (err) {
             console.log(err);
             res.end();
         }
-        res.send(data[0]);  
+        console.log(data);
+        res.send(data);  
     })
 });
 
