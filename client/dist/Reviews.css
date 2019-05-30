@@ -1,17 +1,35 @@
+body {
+    background-color: rgb(250,250,250)
+}
+
+
 .images {
     background-size: contain;
     display: inline-block;
     height: 72px;
     width: 72px;
-    border-radius: 50%
+    border-radius: 50%;
+    flex-shrink: 0;
+    
 }
 
 
-.startext {
+.star-text {
+    display: flex;
     color: #101820;
     font: 15px/20px 'Calibre-Regular';
     letter-spacing: .013em;
 }
+
+.text {
+    width: 60%;
+    color: #101820;
+    font: 15px/20px 'Calibre-Regular';
+    letter-spacing: .013em;
+}
+
+
+    
 
 .dates {
     color: #656666;
@@ -22,5 +40,22 @@
 .container {
     background: white;
     padding: 0 40px 40px;
+    width: 960px;
+}
+
+.one-review {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    padding: 3%;
+    border-top: 1px solid #ccc;
+}
+
+.review-data {
+    margin-left: 10%;
+
+    
+    /* display: block */
 }
 
