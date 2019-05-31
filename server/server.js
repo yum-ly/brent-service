@@ -17,7 +17,7 @@ app.use(express.static(__dirname + '/../client/dist'));
 
   
 //get one review
-app.get('/http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com', function (req, res) {
+app.get('/https://ec2-3-19-61-244.us-east-2.compute.amazonaws.com', function (req, res) {
     console.log(req);
     let id = req.query.uuid;
     db.findOne({uuid: id}, (err, data) => {
