@@ -16,15 +16,15 @@ let reviewSchema = mongoose.Schema({
 
 let Review = mongoose.model('Review', reviewSchema);
 
-//pull all reviews from db
-let findAll = (object, callback) => {
-  Review.find(object, function(err, data) {
-    if (err) {
-      console.log(err);
-    }
-    callback(null, data);
-  });
-}
+// //pull all reviews from db
+// let findAll = (object, callback) => {
+//   Review.find(object, function(err, data) {
+//     if (err) {
+//       console.log(err);
+//     }
+//     callback(null, data);
+//   });
+// }
 
 //Pull one review from db
 let findOne = (object, callback) => {
@@ -50,7 +50,7 @@ let findOne = (object, callback) => {
 
 
 module.exports.findOne = findOne;
-module.exports.findAll = findAll;
+// module.exports.findAll = findAll;
 
 
 
