@@ -14,7 +14,7 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com', {params: { uuid: this.state.uuid }})
+        axios.get('http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com/reviews', {params: { uuid: this.state.uuid }})
         .then((response) => {
             console.log(response.data);
             this.setState({
