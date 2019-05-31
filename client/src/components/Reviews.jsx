@@ -14,7 +14,7 @@ class Reviews extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com/bundle.js', {params: { uuid: this.state.uuid }})
+        axios.get('http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com', {params: { uuid: this.state.uuid }})
         .then((response) => {
             console.log(response.data.review);
             this.setState({
@@ -84,7 +84,7 @@ class Reviews extends React.Component {
                 <div className='avg-stars-container'>
                     <div className='avg-title'>AVERAGE RATING</div>
                     <div className='avg-num'>{this.avgStar()}</div>
-                    {/* <ReactStars  className='avg-stars' count={5} size={24} color1={'#E8E8E8'} color2={'#101820'} value={  this.avgStar()} edit={false} /> */}
+                    <ReactStars  className='avg-stars' count={5} size={24} color1={'#E8E8E8'} color2={'#101820'} value={  this.avgStar()} edit={false} />
                 </div>
                 {this.state.reviews.map((review, index) => {
                     return(
@@ -94,7 +94,7 @@ class Reviews extends React.Component {
                                 <div key={index} className='names'>{review.user}</div>
                                 <div key={index} className='dates'>{this.dateChanger(review.date)}</div>
                                 <div className='star-text'>
-                                    {/* <ReactStars key={index} className='inline-stars' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} /> */}
+                                    <ReactStars key={index} className='inline-stars' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} />
                                     <ReadMoreAndLess key={index} className='read-more' ref={this.ReadMore} className='text' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
                                 </div>
                             </div>    
