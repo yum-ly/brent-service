@@ -78,6 +78,7 @@ class Reviews extends React.Component {
     }
 
     render() {
+        if (this.state.reviews.length < 2) {
         return(
             <div className='container'>
                 <div className='avg-stars-container'>
@@ -103,6 +104,10 @@ class Reviews extends React.Component {
             )}
             </div>
         )
+            }
+            return(
+                <div>placeholder</div>
+            )
     }
 }
                     
