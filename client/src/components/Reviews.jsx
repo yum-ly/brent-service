@@ -77,9 +77,7 @@ class Reviews extends React.Component {
         }
     }
 
-//<div className='text'>{review.text}</div>
     render() {
-        console.log(ReadMoreAndLess)
         return(
             <div className='container'>
                 <div className='avg-stars-container'>
@@ -97,7 +95,6 @@ class Reviews extends React.Component {
                                 <div className='star-text'>
                                     <ReactStars className='inline-stars' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} />
                                     <ReadMoreAndLess className='read-more' ref={this.ReadMore} className='text' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
-                                    {/* <div className='text'>{review.text}</div> */}
                                 </div>
                             </div>    
                         </div>
