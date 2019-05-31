@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('../database/index.js');
+const cors = require('cors');
 const app = express();
 
-
+app.use(cors());
 
 
 //***Middleware */
