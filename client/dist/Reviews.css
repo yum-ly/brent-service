@@ -1,7 +1,5 @@
-body {
-    position: absolute;
-    background-color: rgb(250,250,250)
-}
+/* body {
+} */
 
 
 .images-reviews {
@@ -58,7 +56,8 @@ body {
 }
 
 .container-reviews {
-    padding-top: 500px;
+    position: absolute;
+    top: 600px;
     background: white;
     padding: 0 40px 40px;
     width: 960px;
