@@ -8,7 +8,7 @@ class Reviews extends React.Component {
         super(props);
 
         this.state = {
-            uuid: 2,
+            uuid: 1,
             reviews: [{stars: 0, user: '', date: '', text: '', avatar: ''}],
         }
     }
