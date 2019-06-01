@@ -79,22 +79,22 @@ class Reviews extends React.Component {
 
     render() {
         return(
-            <div className='container'>
-                <div className='avg-stars-container'>
-                    <div className='avg-title'>AVERAGE RATING</div>
-                    <div className='avg-num'>{this.avgStar()}</div>
-                    <ReactStars  className='avg-stars' count={5} size={24} color1={'#E8E8E8'} color2={'#101820'} value={  this.avgStar()} edit={false} />
+            <div className='container-reviews'>
+                <div className='avg-stars-container-reviews'>
+                    <div className='avg-title-reviews'>AVERAGE RATING</div>
+                    <div className='avg-num-reviews'>{this.avgStar()}</div>
+                    <ReactStars  className='avg-stars-reviews' count={5} size={24} color1={'#E8E8E8'} color2={'#101820'} value={  this.avgStar()} edit={false} />
                 </div>
                 {this.state.reviews.map((review) => {
                     return(
-                        <div className='one-review'>
-                            <img src={review.avatar} alt="Avatar" className="images"/>
-                            <div className='review-data'>
-                                <div className='names'>{review.user}</div>
-                                <div className='dates'>{this.dateChanger(review.date)}</div>
-                                <div className='star-text'>
-                                    <ReactStars className='inline-stars' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} />
-                                    <ReadMoreAndLess className='read-more' ref={this.ReadMore} className='text' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
+                        <div className='one-review-reviews'>
+                            <img src={review.avatar} alt="Avatar-reviews" className="images"/>
+                            <div className='review-data-reviews'>
+                                <div className='names-reviews'>{review.user}</div>
+                                <div className='dates-reviews'>{this.dateChanger(review.date)}</div>
+                                <div className='star-text-reviews'>
+                                    <ReactStars className='inline-stars-reviews' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} />
+                                    <ReadMoreAndLess className='read-more-reviews' ref={this.ReadMore} className='text-reviews' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
                                 </div>
                             </div>    
                         </div>

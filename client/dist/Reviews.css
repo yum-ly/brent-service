@@ -1,10 +1,10 @@
-body {
+body-reviews {
     position: absolute;
     background-color: rgb(250,250,250)
 }
 
 
-.images {
+.images-reviews {
     background-size: contain;
     display: inline-block;
     height: 72px;
@@ -15,22 +15,22 @@ body {
 }
 
 
-.star-text {
+.star-text-reviews {
     display: flex;
     flex-wrap: wrap;
 }
 
-.text {
+.text-reviews {
     color: #101820;
     font: 15px/20px 'Calibre-Regular';
     letter-spacing: .013em;
 }
 
-.avg-stars-container {
+.avg-stars-container-reviews {
     display: flex;
 }
 
-.avg-title {
+.avg-title-reviews {
     color: #656666;
     font: 16px/24px 'Calibre-Semibold';
     letter-spacing: .086em;
@@ -38,7 +38,7 @@ body {
     padding-top: .4%;
 }
 
-.avg-num {
+.avg-num-reviews {
     font: 18px 'Calibre-Semibold';
     letter-spacing: .086em;
     text-transform: uppercase;
@@ -47,24 +47,24 @@ body {
     padding-right: .5%;
 }
 
-.avg-stars {
+.avg-stars-reviews {
     padding-left: 0;
 }
     
 
-.dates {
+.dates-reviews {
     color: #656666;
     font: 15px/24px 'Calibre-Regular';
     letter-spacing: .013em;
 }
 
-.container {
+.container-reviews {
     background: white;
     padding: 0 40px 40px;
     width: 960px;
 } 
 
-.one-review {
+.one-review-reviews {
     display: flex;
     flex-direction: row;
     margin-bottom: 1%;
@@ -73,14 +73,14 @@ body {
     border-top: 1px solid #ccc;
 } 
 
-  .review-data {
+  .review-data-reviews {
     margin-left: 10%;
 
     
    
 } 
 
-.readMoreText {
+.readMoreText-reviews {
     color: #9b9b9b !important;
 }
 
