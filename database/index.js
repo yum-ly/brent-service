@@ -27,14 +27,14 @@ let Review = mongoose.model('Review', reviewSchema);
 // }
 
 //Pull one review from db
-let findOne = (object, callback) => {
-  Review.findOne(object, function(err, data) {
-    if (err) {
-      console.log(err);
-    } 
-    callback(null, data);
-  });
-}
+// let findOne = (object, callback) => {
+//   Review.findOne(object, function(err, data) {
+//     if (err) {
+//       console.log(err);
+//     } 
+//     callback(null, data);
+//   });
+// }
 
 
 // const MongoClient = require('mongodb').MongoClient;
@@ -49,13 +49,13 @@ let findOne = (object, callback) => {
 
 
 
-module.exports.findOne = findOne;
+// module.exports.findOne = findOne;
 // module.exports.findAll = findAll;
 
 
 
 ////////********* */DATABASE SEEDING! DONT TOUCH UNLESS NEED TO RESEED*******//////
-// const seed = () => { fs.readFile('./data.json', (err, data) => {
+// const seed = () => { fs.readFile('./olddata.json', (err, data) => {
 //   //console.log(JSON.parse(data[0]), 'yo');
 //   let parsedata = JSON.parse(data);
 //   parsedata.map(e => {
