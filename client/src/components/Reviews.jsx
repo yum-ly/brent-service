@@ -85,10 +85,10 @@ class Reviews extends React.Component {
                     <div className='avg-num-reviews'>{this.avgStar()}</div>
                     <ReactStars  className='avg-stars-reviews' count={5} size={24} color1={'#E8E8E8'} color2={'#101820'} value={  this.avgStar()} edit={false} />
                 </div>
-                {this.state.reviews.map((review) => {
+                {this.state.reviews.map((review, index) => {
                     return(
-                        <div className='one-review-reviews'>
-                            <img src={review.avatar} alt="Avatar-reviews" className="images"/>
+                        <div className='one-review-reviews' key={index}>
+                            <img src={review.avatar} alt="Avatar-reviews" className="images-reviews"/>
                             <div className='review-data-reviews'>
                                 <div className='names-reviews'>{review.user}</div>
                                 <div className='dates-reviews'>{this.dateChanger(review.date)}</div>
