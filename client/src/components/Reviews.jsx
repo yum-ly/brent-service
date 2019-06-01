@@ -25,6 +25,20 @@ class Reviews extends React.Component {
         })
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.uuid !== prevProps.uuid) {
+        axios.get('http://ec2-3-19-61-244.us-east-2.compute.amazonaws.com/reviews', {params: { uuid: this.props.uuid }})
+        .then((response) => {
+            this.setState({
+                reviews: response.data.review
+            });
+        })
+        .catch((error) => {
+            console.log(error); 
+        })
+    }
+    }
+
     avgStar() {
         let array = this.state.reviews.map((review) => {
             return Number(review.stars);
