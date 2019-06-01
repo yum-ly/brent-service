@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-//var fs = require('fs');
+// var fs = require('fs');
 const dbinfo = require('./dbinfo.js');
 
 const uri = `mongodb+srv://${dbinfo.username}:${dbinfo.pw}@cluster0-kn8tl.mongodb.net/test?retryWrites=true`;
@@ -54,7 +54,7 @@ module.exports.findOne = findOne;
 
 
 
-//////////********* */DATABASE SEEDING! DONT TOUCH UNLESS NEED TO RESEED*******//////
+////////********* */DATABASE SEEDING! DONT TOUCH UNLESS NEED TO RESEED*******//////
 // const seed = () => { fs.readFile('./data.json', (err, data) => {
 //   //console.log(JSON.parse(data[0]), 'yo');
 //   let parsedata = JSON.parse(data);
