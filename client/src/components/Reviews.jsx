@@ -93,7 +93,7 @@ class Reviews extends React.Component {
                                 <div className='dates-reviews'>{this.dateChanger(review.date)}</div>
                                 <div className='star-text-reviews'>
                                     <ReactStars className='inline-stars-reviews' count={5} size={18} color1={'#E8E8E8'} color2={'#101820'} value={review.stars} edit={false} />
-                                    <ReadMoreAndLess className='read-more-reviews' ref={this.ReadMore} className='text-reviews' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
+                                    <ReadMoreAndLess ref={this.ReadMore} className='text-reviews' readLessText='...See Less' readMoreText='See More'>{review.text}</ReadMoreAndLess>
                                 </div>
                             </div>    
                         </div>
