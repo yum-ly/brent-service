@@ -27,14 +27,14 @@ let Review = mongoose.model('Review', reviewSchema);
 // }
 
 //Pull one review from db
-// let findOne = (object, callback) => {
-//   Review.findOne(object, function(err, data) {
-//     if (err) {
-//       console.log(err);
-//     } 
-//     callback(null, data);
-//   });
-// }
+let findOne = (object, callback) => {
+  Review.findOne(object, function(err, data) {
+    if (err) {
+      console.log(err);
+    } 
+    callback(null, data);
+  });
+}
 
 
 // const MongoClient = require('mongodb').MongoClient;
@@ -49,7 +49,7 @@ let Review = mongoose.model('Review', reviewSchema);
 
 
 
-// module.exports.findOne = findOne;
+module.exports.findOne = findOne;
 // module.exports.findAll = findAll;
 
 
