@@ -1,6 +1,14 @@
 /* body {
 } */
 
+.container-reviews {
+    position: absolute;
+    top: 880px;
+    background: white;
+    padding: 0 40px 40px;
+    width: 890px;
+    margin-left: 115px;
+} 
 
 .images-reviews {
     background-size: contain;
@@ -55,13 +63,6 @@
     letter-spacing: .013em;
 }
 
-.container-reviews {
-    position: absolute;
-    top: 900px;
-    background: white;
-    padding: 0 40px 40px;
-    width: 960px;
-} 
 
 .one-review-reviews {
     display: flex;
