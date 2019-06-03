@@ -101,7 +101,7 @@ class Reviews extends React.Component {
                 {this.state.reviews.map((review, index) => {
                     return(
                         <div className='one-review-reviews' key={index}>
-                            <img src={review.avatar} alt="Avatar-reviews" className="images-reviews"/>
+                            <img src={review.avatar[0]} alt="Avatar-reviews" className="images-reviews"/>
                             <div className='review-data-reviews'>
                                 <div className='names-reviews'>{review.user}</div>
                                 <div className='dates-reviews'>{this.dateChanger(review.date)}</div>
