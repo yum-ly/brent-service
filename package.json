@@ -1,17 +1,49 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
-  "engines": {
-    "node": ">=6.13.0"
-  },
+  "name": "brent-service",
+  "version": "1.0.0",
+  "description": "> Project description",
+  "main": "index.js",
   "scripts": {
+    "restart": "pm2 startOrRestart ecosystem.config.js",
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yum-ly/brent-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yum-ly/brent-service/issues"
+  },
+  "homepage": "https://github.com/yum-ly/brent-service#readme",
   "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.2.4",
+    "mongoose": "^5.5.9",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-read-more-less": "^0.1.6",
+    "react-simple-show-more": "^1.0.2",
+    "react-stars": "^2.2.5",
+    "read-more-react": "^1.0.9"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "pm2": "^3.5.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   }
 }
