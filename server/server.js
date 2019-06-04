@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const reviews = require('../database/index.js');
 const db = require('../database/index.js');
+const cors = require('cors');
 const app = express();
 
-
+app.use(cors());
 
 
 //***Middleware */
@@ -16,9 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../client/dist'));
 
   
-// get all the reviews
+//get one review
 app.get('/reviews', function (req, res) {
-    db.findAll({}, (err, data) => {
+    console.log(req);
+    let id = req.query.uuid;
+    db.findOne({uuid: id}, (err, data) => {
         if (err) {
             console.log(err);
             res.end();
@@ -27,6 +29,7 @@ app.get('/reviews', function (req, res) {
         res.send(data);  
     })
 });
+        
 
 
 let port = 3004;
